@@ -1,0 +1,40 @@
+# Contributing to flutter_widget_kit
+
+Thank you for your interest in contributing! We follow a strict monorepo structure and branching strategy to maintain high quality.
+
+## Repository Structure
+
+- `packages/flutter_widget_kit`: The runtime Flutter plugin.
+- `packages/flutter_widget_kit_generator`: The `build_runner` code generator.
+- `packages/flutter_widget_kit_cli`: Standalone CLI tool.
+- `apps/example`: Example application for testing and demonstration.
+
+## Branching Strategy
+
+- `main`: Always mirrors the latest published version on pub.dev.
+- `develop`: Integration branch. All features merge here first.
+- `feature/*`: Individual features, branch from `develop`.
+- `fix/*`: Bug fixes, branch from `develop`.
+- `release/v*`: Stabilization branches cut from `develop`.
+- `hotfix/*`: Branches from `main` for critical production issues.
+
+## Conventional Commits
+
+We enforce [Conventional Commits](https://www.conventionalcommits.org/):
+- `feat:`: A new feature
+- `fix:`: A bug fix
+- `docs:`: Documentation changes
+- `chore:`: Maintenance tasks
+- `refactor:`: Code changes that neither fix a bug nor add a feature
+- `test:`: Adding or correcting tests
+- `perf:`: Performance improvements
+- `ci:`: CI/CD configuration changes
+
+Breaking changes must be marked with a `!` or `BREAKING CHANGE:` in the footer.
+
+## Development Setup
+
+1. Install Melos: `dart pub global activate melos`
+2. Bootstrap the workspace: `melos bootstrap`
+3. Run code generation: `melos run build`
+4. Run tests: `melos run test`

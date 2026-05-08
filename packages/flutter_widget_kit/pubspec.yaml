@@ -1,0 +1,25 @@
+name: flutter_widget_kit
+description: Production-grade Flutter plugin to bridge Flutter app state to iOS WidgetKit and Android Glance.
+version: 0.1.0-beta.1
+homepage: https://github.com/Sam21-39/flutter_widget_kit
+repository: https://github.com/Sam21-39/flutter_widget_kit/tree/main/packages/flutter_widget_kit
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.10.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.8.1
+  meta: ^1.9.1
+  path: ^1.8.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.6
+  freezed: ^2.4.1
+  json_serializable: ^6.7.1
+  custom_lint: ^0.5.0

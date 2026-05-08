@@ -1,0 +1,18 @@
+name: flutter_widget_kit_cli
+description: Standalone CLI tool for flutter_widget_kit platform management.
+version: 0.1.0-beta.1
+homepage: https://github.com/Sam21-39/flutter_widget_kit
+repository: https://github.com/Sam21-39/flutter_widget_kit/tree/main/packages/flutter_widget_kit_cli
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  args: ^2.4.2
+  cli_util: ^0.4.0
+  io: ^2.1.0
+  path: ^1.8.3
+  yaml: ^3.1.2
+
+dev_dependencies:
+  test: ^1.24.0

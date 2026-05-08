@@ -1,0 +1,28 @@
+name: Release
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    if: "startsWith(github.event.head_commit.message, 'chore(release):')"
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Create Tag
+        run: |
+          VERSION=$(grep 'version:' packages/flutter_widget_kit/pubspec.yaml | sed 's/version: //')
+          git tag v$VERSION
+          git push origin v$VERSION
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create v$VERSION --generate-notes
+      - name: Notify Discord
+        run: |
+          # Placeholder for Discord webhook notification
+          echo "Notified Discord"

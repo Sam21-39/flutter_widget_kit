@@ -1,0 +1,24 @@
+name: flutter_widget_kit_workspace
+description: Monorepo for flutter_widget_kit
+repository: https://github.com/Sam21-39/flutter_widget_kit
+
+packages:
+  - packages/*
+  - apps/*
+
+scripts:
+  analyze:
+    run: melos exec -c 1 -- "dart analyze --fatal-infos --fatal-warnings"
+    description: Run dart analyze for all packages.
+
+  format:
+    run: melos exec -- "dart format ."
+    description: Run dart format for all packages.
+
+  test:
+    run: melos exec -- "flutter test"
+    description: Run tests for all packages.
+
+  build:
+    run: melos exec -- "dart run build_runner build --delete-conflicting-outputs"
+    description: Run build_runner for all packages.
