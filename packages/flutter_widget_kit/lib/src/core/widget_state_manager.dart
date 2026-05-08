@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:flutter/foundation.dart';
 
 /// Manages JSON serialization to App Groups (iOS) and SharedPreferences (Android).

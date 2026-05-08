@@ -11,7 +11,7 @@ class WidgetKit {
   static Future<void> update(String widgetId, dynamic state) async {
     try {
       // Implementation will bridge to native code.
-    } catch (e, stack) {
+    } catch (e) {
       throw WidgetUpdateException(
         'Failed to update widget $widgetId',
         widgetId: widgetId,

@@ -27,7 +27,8 @@ class PlatformConfigException extends WidgetKitException {
 
 /// Thrown when state serialization fails.
 class StateSerializationException extends WidgetKitException {
-  const StateSerializationException(super.message, {super.widgetId, super.cause});
+  const StateSerializationException(super.message,
+      {super.widgetId, super.cause});
 }
 
 /// Thrown when scheduling a periodic update fails.

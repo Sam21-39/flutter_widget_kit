@@ -11,9 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: kuhnroyal/flutter-fvm-config-action@v1
+        id: fvm-config
       - uses: subosito/flutter-action@v2
         with:
-          channel: 'stable'
+          flutter-version: ${{ steps.fvm-config.outputs.FLUTTER_VERSION }}
+          channel: ${{ steps.fvm-config.outputs.FLUTTER_CHANNEL }}
       - name: Install Melos
         run: dart pub global activate melos
       - name: Bootstrap
@@ -25,9 +28,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: kuhnroyal/flutter-fvm-config-action@v1
+        id: fvm-config
       - uses: subosito/flutter-action@v2
         with:
-          channel: 'stable'
+          flutter-version: ${{ steps.fvm-config.outputs.FLUTTER_VERSION }}
+          channel: ${{ steps.fvm-config.outputs.FLUTTER_CHANNEL }}
       - name: Install Melos
         run: dart pub global activate melos
       - name: Bootstrap
@@ -39,16 +45,19 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: kuhnroyal/flutter-fvm-config-action@v1
+        id: fvm-config
       - uses: subosito/flutter-action@v2
         with:
-          channel: 'stable'
+          flutter-version: ${{ steps.fvm-config.outputs.FLUTTER_VERSION }}
+          channel: ${{ steps.fvm-config.outputs.FLUTTER_CHANNEL }}
       - name: Install Melos
         run: dart pub global activate melos
       - name: Bootstrap
         run: melos bootstrap
       - name: Run Tests with Coverage
         run: |
-          melos exec --dir-exists="test" -- "flutter test --coverage"
+          melos exec --dir-exists="test" -- "fvm flutter test --coverage"
       - name: Check Coverage
         run: |
           # Implementation of coverage check (minimum 80%)
@@ -58,9 +67,12 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: kuhnroyal/flutter-fvm-config-action@v1
+        id: fvm-config
       - uses: subosito/flutter-action@v2
         with:
-          channel: 'stable'
+          flutter-version: ${{ steps.fvm-config.outputs.FLUTTER_VERSION }}
+          channel: ${{ steps.fvm-config.outputs.FLUTTER_CHANNEL }}
       - name: Install Melos
         run: dart pub global activate melos
       - name: Bootstrap
@@ -80,9 +92,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: kuhnroyal/flutter-fvm-config-action@v1
+        id: fvm-config
       - uses: subosito/flutter-action@v2
         with:
-          channel: 'stable'
+          flutter-version: ${{ steps.fvm-config.outputs.FLUTTER_VERSION }}
+          channel: ${{ steps.fvm-config.outputs.FLUTTER_CHANNEL }}
       - name: Install Melos
         run: dart pub global activate melos
       - name: Bootstrap

@@ -45,7 +45,8 @@ class _IOSSystemExtraLarge extends IOSWidgetFamily {
 sealed class AndroidWidgetFamily extends WidgetFamily {
   const AndroidWidgetFamily();
 
-  static WidgetFamily cells(int width, int height) => _AndroidCellSize(width, height);
+  static WidgetFamily cells(int width, int height) =>
+      _AndroidCellSize(width, height);
 }
 
 class _AndroidCellSize extends AndroidWidgetFamily {

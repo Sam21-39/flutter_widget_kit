@@ -61,7 +61,7 @@ class ManualUpdate extends UpdateStrategy {
 /// Annotation for defining a Home Screen Widget.
 ///
 /// Applied to a class that is also annotated with `@freezed`.
-@Target({TargetKind.class})
+@Target({TargetKind.classType})
 class WidgetDefinition {
   /// Unique identifier for the widget.
   final String widgetId;
@@ -106,7 +106,7 @@ class WidgetDefinition {
 /// Annotation for defining a Live Activity (iOS only).
 ///
 /// Applied to a Freezed class.
-@Target({TargetKind.class})
+@Target({TargetKind.classType})
 class LiveActivity {
   /// Unique type identifier for the activity.
   final String activityType;

@@ -34,7 +34,9 @@ Breaking changes must be marked with a `!` or `BREAKING CHANGE:` in the footer.
 
 ## Development Setup
 
-1. Install Melos: `dart pub global activate melos`
-2. Bootstrap the workspace: `melos bootstrap`
-3. Run code generation: `melos run build`
-4. Run tests: `melos run test`
+1. Install FVM: `dart pub global activate fvm`
+2. Install the Flutter version: `fvm install`
+3. Install Melos: `dart pub global activate melos`
+4. Bootstrap the workspace: `melos bootstrap`
+5. Run code generation: `melos run build`
+6. Run tests: `melos run test`
