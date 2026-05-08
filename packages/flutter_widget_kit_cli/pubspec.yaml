@@ -1,4 +1,5 @@
 name: flutter_widget_kit_cli
+publish_to: none
 description: Standalone CLI tool for flutter_widget_kit platform management.
 version: 0.1.0-beta.1
 homepage: https://github.com/Sam21-39/flutter_widget_kit

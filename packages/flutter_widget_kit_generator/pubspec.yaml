@@ -1,4 +1,5 @@
 name: flutter_widget_kit_generator
+publish_to: none
 description: Build_runner code generator for flutter_widget_kit.
 version: 0.1.0-beta.1
 homepage: https://github.com/Sam21-39/flutter_widget_kit

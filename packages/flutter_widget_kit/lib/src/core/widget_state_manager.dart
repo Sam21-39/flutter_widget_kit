@@ -21,7 +21,8 @@ abstract class WidgetStateManager {
     } else if (defaultTargetPlatform == TargetPlatform.android) {
       return _AndroidWidgetStateManager();
     }
-    throw UnsupportedError('WidgetStateManager is only supported on iOS and Android.');
+    throw UnsupportedError(
+        'WidgetStateManager is only supported on iOS and Android.');
   }
 }
 

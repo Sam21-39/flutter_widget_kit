@@ -21,6 +21,7 @@ __pycache__/
 
 # Visual Studio Code related
 .vscode/
+.fvm/
 
 # Flutter/Dart related
 **/doc/api/
