@@ -88,5 +88,5 @@ coverage/
 .melos/
 melos_*.log
 
-# FVM Version Cache
+# FVM
 .fvm/
