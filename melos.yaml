@@ -8,17 +8,17 @@ packages:
 
 scripts:
   analyze:
-    run: melos exec -c 1 -- "fvm dart analyze --fatal-infos --fatal-warnings"
+    run: melos exec -c 1 -- "dart analyze --fatal-infos --fatal-warnings"
     description: Run dart analyze for all packages.
 
   format:
-    run: melos exec -- "fvm dart format ."
+    run: melos exec -- "dart format ."
     description: Run dart format for all packages.
 
   test:
-    run: melos exec -- "fvm flutter test"
+    run: melos exec -- "flutter test"
     description: Run tests for all packages.
 
   build:
-    run: melos exec -- "fvm dart run build_runner build --delete-conflicting-outputs"
+    run: melos exec -- "dart run build_runner build --delete-conflicting-outputs"
     description: Run build_runner for all packages.

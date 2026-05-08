@@ -63,7 +63,7 @@ jobs:
         run: melos bootstrap
       - name: Run Tests with Coverage
         run: |
-          melos exec --dir-exists="test" -- "fvm flutter test --coverage"
+          melos exec --dir-exists="test" -- "flutter test --coverage"
       - name: Check Coverage
         run: |
           # Implementation of coverage check (minimum 80%)
