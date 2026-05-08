@@ -1,0 +1,22 @@
+builders:
+  widgetKitDartBuilder:
+    import: "package:flutter_widget_kit_generator/flutter_widget_kit_generator.dart"
+    builder_factories: ["widgetKitDartBuilder"]
+    build_extensions: { ".dart": [".widget_kit.dart"] }
+    auto_apply: dependents
+    build_to: source
+
+  widgetKitNativeBuilder:
+    import: "package:flutter_widget_kit_generator/flutter_widget_kit_generator.dart"
+    builder_factories: ["widgetKitNativeBuilder"]
+    build_extensions: { ".dart": [".widget_kit.log"] }
+    auto_apply: dependents
+    build_to: source # We will use a post-build logic to write to native dirs
+    defaults:
+      options:
+        ios_output_dir: "ios/Runner/GeneratedWidgets"
+        android_output_dir: "android/app/src/main/kotlin/com/example/widgets"
+        generate_previews: true
+        generate_snapshot_tests: false
+        swift_availability: "iOS 16.0"
+        min_android_api: 26
