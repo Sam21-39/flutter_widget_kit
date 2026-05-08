@@ -1,7 +1,6 @@
 import 'package:analyzer/dart/element/nullability_suffix.dart';
 import 'package:analyzer/dart/element/element.dart';
 import 'package:source_gen/source_gen.dart';
-import 'package:flutter_widget_kit/flutter_widget_kit.dart';
 import '../models/widget_metadata.dart';
 
 class AnnotationParser {

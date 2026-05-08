@@ -15,7 +15,7 @@ class TypeMapper {
 
   String toKotlinType() {
     final baseType = _mapBaseType(platform: 'kotlin');
-    return type.isNullable ? "$baseType?" : baseType;
+    return type.nullabilitySuffix == NullabilitySuffix.question ? "$baseType?" : baseType;
   }
 
   String _mapBaseType({required String platform}) {
